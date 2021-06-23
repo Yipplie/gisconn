@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QueryResult xmlns="urn://x-artefacts-smev-gov-ru/services/service-adapter/types" xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/service-adapter/types/faults">
+	<smevMetadata>
+		<ReferenceMessageID>348f6aba-b4b0-11eb-a983-7a79192b04f2</ReferenceMessageID>
+		<TransactionCode>3460e09b-b4b0-11eb-98bc-001a4a1660a6|00000000000000000000|PfFkuGOyfgl+6W2VT80pxFCOOSncKx8QnoYsyphcuyBq8dpPEohtS8fdpKgf/iiM2Dp933hHmumNElQzWJGw7Ur0oQYErmVe21n1v6yb8725AYxz6fgLIXiRwZ88agzwAuvqYaE0zdGKWwnvNJOywvbg8kZU9C5Y5Sif3jOL359EQ02HszlhS/rgKeyeqhFLKXg0omST7UZiqm3H8z367PCJnH+4fcd6QrPQR6FJE/18wr0NB7MFVdPthal5DpqLx9vuveLoQYUvJ1tWrBp/rKpg+UDtbTgAqdozz1LTV/7Sw7lqprCGLdscrWE3RYz9dUCFIZ3u4HIEWRPAR+xRMg==</TransactionCode>
+		<OriginalMessageID>348f6aba-b4b0-11eb-a983-7a79192b04f2</OriginalMessageID>
+	</smevMetadata>
+	<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ResponseMessageType">
+		<messageType>StatusMessage</messageType>
+		<ResponseMetadata>
+			<clientId>5cef7009-d38c-4f84-9c67-304ba20cca9f</clientId>
+			<replyToClientId>fe3a435e-a30f-4e7f-a844-87e1ba3933f5</replyToClientId>
+		</ResponseMetadata>
+		<ResponseContent>
+			<status>
+				<code>0</code>
+				<description>Сообщение отправлено в СМЭВ</description>
+			</status>
+		</ResponseContent>
+	</Message>
+</QueryResult>

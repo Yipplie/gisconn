@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QueryResult xmlns="urn://x-artefacts-smev-gov-ru/services/service-adapter/types">
+    <smevMetadata>
+        <MessageId>3c9c6e93-b4b0-11eb-a231-00505683fc4b</MessageId>
+        <ReferenceMessageID>348f6aba-b4b0-11eb-a983-7a79192b04f2</ReferenceMessageID>
+        <TransactionCode>
+            3460e09b-b4b0-11eb-98bc-001a4a1660a6|00000000000000000000|PfFkuGOyfgl+6W2VT80pxFCOOSncKx8QnoYsyphcuyBq8dpPEohtS8fdpKgf/iiM2Dp933hHmumNElQzWJGw7Ur0oQYErmVe21n1v6yb8725AYxz6fgLIXiRwZ88agzwAuvqYaE0zdGKWwnvNJOywvbg8kZU9C5Y5Sif3jOL359EQ02HszlhS/rgKeyeqhFLKXg0omST7UZiqm3H8z367PCJnH+4fcd6QrPQR6FJE/18wr0NB7MFVdPthal5DpqLx9vuveLoQYUvJ1tWrBp/rKpg+UDtbTgAqdozz1LTV/7Sw7lqprCGLdscrWE3RYz9dUCFIZ3u4HIEWRPAR+xRMg==
+        </TransactionCode>
+        <OriginalMessageID>348f6aba-b4b0-11eb-a983-7a79192b04f2</OriginalMessageID>
+        <Sender>RKZN02_3S</Sender>
+        <Recipient>742G01</Recipient>
+    </smevMetadata>
+    <Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ResponseMessageType">
+        <messageType>PrimaryMessage</messageType>
+        <ResponseMetadata>
+            <clientId>13eef21d-f407-4db4-8e41-8d909cbfdce8</clientId>
+            <replyToClientId>fe3a435e-a30f-4e7f-a844-87e1ba3933f5</replyToClientId>
+        </ResponseMetadata>
+        <ResponseContent>
+            <content>
+                <MessagePrimaryContent>
+                    <ns1:ImportChargesResponse Id="I_27e2f4e8-bc90-c7f3-f146-722070c11b72"
+                                               RqId="G_fce0c544-b08d-44bc-83d8-738f10e9d068"
+                                               recipientIdentifier="3651af" timestamp="2021-05-14T15:30:58.830+03:00"
+                                               xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2"
+                                               xmlns:com="http://roskazna.ru/gisgmp/xsd/Common/2.2.0"
+                                               xmlns:ns1="urn://roskazna.ru/gisgmp/xsd/services/import-charges/2.2.0"
+                    >
+                        <com:ImportProtocol code="0" description="успешно"
+                                            entityID="I_54a59db2-3845-4915-8770-dd95394aadb4"/>
+                    </ns1:ImportChargesResponse>
+                </MessagePrimaryContent>
+            </content>
+        </ResponseContent>
+    </Message>
+</QueryResult>

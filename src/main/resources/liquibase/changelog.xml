@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="Bazh_m" id="1">
+        <sql>
+            CREATE TABLE "state"
+            (
+            id INT IDENTITY CONSTRAINT state_pk PRIMARY KEY NONCLUSTERED,
+            order_id INT,
+            status NVARCHAR(10),
+            )
+
+            CREATE TABLE "message"
+            (
+            id INT IDENTITY CONSTRAINT response_pk PRIMARY KEY NONCLUSTERED,
+            order_id INT,
+            guid VARCHAR(36),
+            is_current BIT,
+            ctime DATETIME null,
+            code NVARCHAR(50),
+            description NVARCHAR(250),
+            body NVARCHAR(max)
+            )
+
+            CREATE TABLE "template"
+            (
+            id INT IDENTITY CONSTRAINT template_pk PRIMARY KEY NONCLUSTERED,
+            order_type NVARCHAR(50),
+            body NVARCHAR(max),
+            ctime DATETIME null
+            )
+        </sql>
+    </changeSet>
+
+
+
+</databaseChangeLog>

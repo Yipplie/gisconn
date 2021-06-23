@@ -1,0 +1,92 @@
+----------------------------------------
+
+post: 192.168.0.5:15010/request 
+{
+    "order_id":"2360048",
+    "order_type":"import",
+    "supplier_bill_id" : "0355985500000000023600484",
+    "bill_date" : "2021-05-26T19:00:00.0+05:00",
+    "total_amount" : "1446600",
+    "purpose" : "Начисление по договору № 14329-16/зем. от 27.05.2021",
+    "kbk" : "46911406012110000430",
+    "oktmo" : "75701000",
+    "payee_name" : "УФК по Челябинской области(Комитет по управлению имуществом и земельным отношениям города Челябинска)",
+    "payee_kpp" : "745101001",
+    "payee_ogrn" : "1027402931500",
+    "payee_inn" : "7421000190",
+    "account_number" : "03100643400000016900",
+    "correspondent_bank_account" : "40102810645370000062",
+    "bank_name" : "ОТДЕЛЕНИЕ ЧЕЛЯБИНСК БАНКА РОССИИ//УФК по Челябинской области г. Челябинск",
+    "bank_bik" : "017501500",
+    "payer_id" : "1010000000007504503458",
+    "payer_name" : "Саренко Г.Г." 
+}
+ответы:
+{"error":{"code":400,"message":"Bad Request: order_id 2360048 already exist"}}
+{"error":{"code":500,"message":"Internal Server Error: No template file for import1"}}
+{"result":"ok","code":"OK"}
+
+----------------------------------------
+
+post: 192.168.0.5:15010/command/kick
+
+ответ:
+{"result":"ok","code":"OK"}
+
+----------------------------------------
+
+put: 192.168.0.5:15010/template/{order_type} // шаблоны проще просто в папку загружать, этот метод для галочки
+{
+	data:"текст шаблона закодированный в BASE64"
+}
+
+ответ:
+{"result":"ok","code":"OK"}
+
+----------------------------------------
+
+get: 192.168.0.5:15010/status/order/{order_id}
+
+ответ:
+{"result":"ok","code":"OK","status":"ACCEPTED"}
+
+----------------------------------------
+
+get: 192.168.0.5:15010/status/all/{status}
+
+ответ:
+{"result":"ok","msg":[2360048],"code":"OK"}
+
+----------------------------------------
+
+get: 192.168.0.5:15010/status/all/unfinished
+
+ответ:
+{"result":"ok","msg":[],"code":"OK"}
+
+----------------------------------------
+
+get: 192.168.0.5:15010/orders/?from=1622055600&to=1822055600&status=ACCEPTED
+
+ответ:
+{
+    "result": "ok",
+    "msg": [
+        {
+            "order_id": 2360048,
+            
+            "body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><QueryResult xmlns=\"urn://x-artefacts-smev-gov-ru/services/service-adapter/types\" xmlns:ns2=\"urn://x-artefacts-smev-gov-ru/services/service-adapter/types/faults\"><smevMetadata><MessageId>3c9c6e93-b4b0-11eb-a231-00505683fc4b</MessageId><ReferenceMessageID>348f6aba-b4b0-11eb-a983-7a79192b04f2</ReferenceMessageID><TransactionCode>3460e09b-b4b0-11eb-98bc-001a4a1660a6|00000000000000000000|PfFkuGOyfgl+6W2VT80pxFCOOSncKx8QnoYsyphcuyBq8dpPEohtS8fdpKgf/iiM2Dp933hHmumNElQzWJGw7Ur0oQYErmVe21n1v6yb8725AYxz6fgLIXiRwZ88agzwAuvqYaE0zdGKWwnvNJOywvbg8kZU9C5Y5Sif3jOL359EQ02HszlhS/rgKeyeqhFLKXg0omST7UZiqm3H8z367PCJnH+4fcd6QrPQR6FJE/18wr0NB7MFVdPthal5DpqLx9vuveLoQYUvJ1tWrBp/rKpg+UDtbTgAqdozz1LTV/7Sw7lqprCGLdscrWE3RYz9dUCFIZ3u4HIEWRPAR+xRMg==</TransactionCode><OriginalMessageID>348f6aba-b4b0-11eb-a983-7a79192b04f2</OriginalMessageID><Sender>RKZN02_3S</Sender><Recipient>742G01</Recipient></smevMetadata><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ResponseMessageType\"><messageType>PrimaryMessage</messageType><ResponseMetadata><clientId>13eef21d-f407-4db4-8e41-8d909cbfdce8</clientId><replyToClientId>6b8959a8-04ca-45ab-82f7-ec31e5da94e2</replyToClientId></ResponseMetadata><ResponseContent><content><MessagePrimaryContent><ns1:ImportChargesResponse xmlns:ns1=\"urn://roskazna.ru/gisgmp/xsd/services/import-charges/2.2.0\" xmlns=\"urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2\" xmlns:basic=\"urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.2\" xmlns:com=\"http://roskazna.ru/gisgmp/xsd/Common/2.2.0\" xmlns:ns2=\"urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.2\" xmlns:ns3=\"urn://x-artefacts-smev-gov-ru/services/message-exchange/types/faults/1.2\" xmlns:tns=\"urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.2\" Id=\"I_27e2f4e8-bc90-c7f3-f146-722070c11b72\" RqId=\"G_fce0c544-b08d-44bc-83d8-738f10e9d068\" recipientIdentifier=\"3651af\" timestamp=\"2021-05-14T15:30:58.830+03:00\"><com:ImportProtocol code=\"0\" description=\"???????\" entityID=\"I_54a59db2-3845-4915-8770-dd95394aadb4\"/></ns1:ImportChargesResponse></MessagePrimaryContent></content></ResponseContent></Message></QueryResult>"
+        }
+    ],
+    "code": "OK"
+}
+
+----------------------------------------
+статусы: 
+	RECEIVED - был получен запрос, 
+	CREATED - создан файл запроса, 
+	SENT - СМЭВ-адаптер отправил запрос, 
+	WAITING - запрос дошел до СМЭВ, 
+	ACCEPTED - пришел ответ на запрос, 
+	FAILED - на каком то этапе произошла ошибка, 
+	EXPIRED - за 5 дней ответ не пришел.

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QueryResult xmlns="urn://x-artefacts-smev-gov-ru/services/service-adapter/types"
+             xmlns:ns2="urn://x-artefacts-smev-gov-ru/services/service-adapter/types/faults">
+    <smevMetadata>
+        <MessageId>348f6aba-b4b0-11eb-a983-7a79192b04f2</MessageId>
+        <TransactionCode>
+            3460e09b-b4b0-11eb-98bc-001a4a1660a6|00000000000000000000|PfFkuGOyfgl+6W2VT80pxFCOOSncKx8QnoYsyphcuyBq8dpPEohtS8fdpKgf/iiM2Dp933hHmumNElQzWJGw7Ur0oQYErmVe21n1v6yb8725AYxz6fgLIXiRwZ88agzwAuvqYaE0zdGKWwnvNJOywvbg8kZU9C5Y5Sif3jOL359EQ02HszlhS/rgKeyeqhFLKXg0omST7UZiqm3H8z367PCJnH+4fcd6QrPQR6FJE/18wr0NB7MFVdPthal5DpqLx9vuveLoQYUvJ1tWrBp/rKpg+UDtbTgAqdozz1LTV/7Sw7lqprCGLdscrWE3RYz9dUCFIZ3u4HIEWRPAR+xRMg==
+        </TransactionCode>
+        <Sender>742G01</Sender>
+    </smevMetadata>
+    <Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RequestMessageType">
+        <RequestMetadata>
+            <clientId>fe3a435e-a30f-4e7f-a844-87e1ba3933f5</clientId>
+            <linkedGroupIdentity>
+                <refClientId>0cdca52c-db0e-49a5-88fd-8b20f468e581</refClientId>
+                <refGroupId>3460e09b-b4b0-11eb-98bc-001a4a1660a6</refGroupId>
+            </linkedGroupIdentity>
+            <testMessage>false</testMessage>
+            <TransactionCode>
+                3460e09b-b4b0-11eb-98bc-001a4a1660a6|00000000000000000000|PfFkuGOyfgl+6W2VT80pxFCOOSncKx8QnoYsyphcuyBq8dpPEohtS8fdpKgf/iiM2Dp933hHmumNElQzWJGw7Ur0oQYErmVe21n1v6yb8725AYxz6fgLIXiRwZ88agzwAuvqYaE0zdGKWwnvNJOywvbg8kZU9C5Y5Sif3jOL359EQ02HszlhS/rgKeyeqhFLKXg0omST7UZiqm3H8z367PCJnH+4fcd6QrPQR6FJE/18wr0NB7MFVdPthal5DpqLx9vuveLoQYUvJ1tWrBp/rKpg+UDtbTgAqdozz1LTV/7Sw7lqprCGLdscrWE3RYz9dUCFIZ3u4HIEWRPAR+xRMg==
+            </TransactionCode>
+        </RequestMetadata>
+        <RequestContent>
+            <content>
+                <MessagePrimaryContent>
+                    <ns7:ImportChargesRequest
+                            Id="G_fce0c544-b08d-44bc-83d8-738f10e9d068"
+                            senderIdentifier="3651af"
+                            senderRole="3"
+                            timestamp="2021-05-14T17:30:24.0+05:00"
+                            xmlns="http://roskazna.ru/gisgmp/xsd/Common/2.2.0"
+                            xmlns:ns2="http://roskazna.ru/gisgmp/xsd/Charge/2.2.0"
+                            xmlns:ns3="http://roskazna.ru/gisgmp/xsd/Organization/2.2.0"
+                            xmlns:ns4="http://roskazna.ru/gisgmp/xsd/Package/2.2.0"
+                            xmlns:ns7="urn://roskazna.ru/gisgmp/xsd/services/import-charges/2.2.0">
+                        <ns4:ChargesPackage>
+                            <ns4:ImportedCharge Id="I_54a59db2-3845-4915-8770-dd95394aadb4"
+                                                billDate="2019-09-30T00:00:00.0+05:00" kbk="11111111111111111111"
+                                                oktmo="11111111"
+                                                purpose="Начисление по договору № 111111-ЧС-2011 от 02.12.2011 за период с 01.07.2019 по 30.09.2019"
+                                                supplierBillID="1111111111111111111111111" totalAmount="294800">
+                                <ns3:Payee inn="1111111111" kpp="111111111"
+                                           name="Тестовая организация"
+                                           ogrn="1111111111111">
+                                    <OrgAccount accountNumber="11111111111111111111">
+                                        <Bank bik="017501500" correspondentBankAccount="11111111111111111111"
+                                              name="ОТДЕЛЕНИЕ ЧЕЛЯБИНСК БАНКА РОССИИ//УФК по Челябинской области г. Челябинск"/>
+                                    </OrgAccount>
+                                </ns3:Payee>
+                                <ns2:Payer payerIdentifier="1111111111111111111111"
+                                           payerName="Тестовый плательщик"/>
+                                <ns2:BudgetIndex paytReason="0" status="01" taxDocDate="0" taxDocNumber="0"
+                                                 taxPeriod="0"/>
+                            </ns4:ImportedCharge>
+                        </ns4:ChargesPackage>
+                    </ns7:ImportChargesRequest>
+                </MessagePrimaryContent>
+            </content>
+        </RequestContent>
+    </Message>
+</QueryResult>
